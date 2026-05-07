@@ -1,0 +1,9 @@
+services:
+  clickhouse:
+    image: clickhouse/clickhouse-server:latest
+    ports:
+      - "8124:8123"
+      - "9002:9000"
+    environment:
+      - CLICKHOUSE_USER=click
+      - CLICKHOUSE_PASSWORD=click
