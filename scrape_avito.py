@@ -1,8 +1,11 @@
 from apify_client import ApifyClient
 import json
 from datetime import datetime
+from dotenv import load_dotenv
+import os
 
-APIFY_TOKEN = "REDACTED"
+load_dotenv()
+APIFY_TOKEN = os.getenv("APIFY_TOKEN")
 
 client = ApifyClient(APIFY_TOKEN)
 
